@@ -14,14 +14,13 @@ def index(request):
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
     context_dict['categories'] = category_list
     context_dict['pages'] = page_list
-    context_dict['extra'] = 'From the model solution on GitHub'
 
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    context_dict = {'boldmessage': 'This tutorial has been put together by Zijian Chen'}
+    # context_dict = {'boldmessage': 'This tutorial has been put together by Zijian Chen'}
 
-    return render(request, 'rango/about.html', context=context_dict)
+    return render(request, 'rango/about.html')
 
 def show_category(request, category_name_slug):
     context_dict = {}
